@@ -11,6 +11,9 @@ def check_length(read, min, max):
 def check_min_quality(read, threshold):
     return min(read) > threshold
 
+def calc_perc(read, interval):
+    return round((interval[1] - interval[0] + 1) / len(read), 2)
+
 def get_subregion_min_quality(read, threshold, length_perc):
     intervals = []
     start = -1
@@ -24,7 +27,8 @@ def get_subregion_min_quality(read, threshold, length_perc):
             
     max_length = max([end - start + 1 for (start, end) in intervals])
     max_intervals = [(start, end) for (start, end) in intervals if end - start + 1 == max_length]
-    return max_intervals[0] if len(max_intervals) != 0 else (-1, -1)
+
+    return max_intervals[0] if len(max_intervals) != 0 and calc_perc(read, max_intervals[0]) >= length_perc else (-1, -1)
 
 def write_fasta(records):
     SeqIO.write(records, "output.fa", "fasta")
