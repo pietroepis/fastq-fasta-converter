@@ -11,7 +11,7 @@ The script filters the reads of a `fastq` file provided as input (in relation to
 
 The script prompts the user these five parameters (L1, L2, Q1, Q2 and P) at the beginning of the execution. The program terminates if L2 is less than L1 or Q2 is less than Q1.
 
-**Output**
+**Output**\
 The reads that overcame all the checks, are written in the output `fasta` including the following values as `description` (of course besides the `identifier`) :
 - `length`: The length of the read
 - `min_quality`: The minimum quality value in the read
