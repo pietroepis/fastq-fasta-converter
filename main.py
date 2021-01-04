@@ -49,17 +49,17 @@ def get_subregion_min_quality(read, threshold, length_perc):
 def write_fasta(records):
     SeqIO.write(records, "output.fa", "fasta")
 
-""" L1 = int(input("L1: "))
+L1 = int(input("L1: "))
 L2 = int(input("L2: ")) 
 Q1 = float(input("Q1: ")) 
 Q2 = float(input("Q2: ")) 
-P = float(input("P: "))  """
+P = float(input("P: ")) 
 
-L1 = 30
+""" L1 = 30
 L2 = 60
 Q1 = 30
 Q2 = 55
-P = 0.15
+P = 0.15 """
 
 # L2 must be greater than L1 and Q2 must be greater than Q1
 if (L2 <= L1 or Q2 <= Q1):
@@ -89,3 +89,4 @@ for record in fastq_records:
         fasta_records.append(annotated_sequence)
 
 write_fasta(fasta_records)
+print("output.fa file successfully created")
