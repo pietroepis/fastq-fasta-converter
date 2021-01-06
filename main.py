@@ -55,12 +55,6 @@ Q1 = float(input("Q1: "))
 Q2 = float(input("Q2: ")) 
 P = float(input("P: ")) 
 
-""" L1 = 30
-L2 = 60
-Q1 = 30
-Q2 = 55
-P = 0.15 """
-
 # L2 must be greater than L1 and Q2 must be greater than Q1
 if (L2 <= L1 or Q2 <= Q1):
     print("Invalid input parameters")
