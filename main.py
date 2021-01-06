@@ -80,7 +80,7 @@ for record in fastq_records:
         annotated_sequence.id = record.id
         annotated_sequence.description = (
             "length:" + str(len(record.seq)) + " " +
-            "min_quality:" + str(Q1) + " " +
+            "min_quality:" + str(min(record.letter_annotations["phred_quality"])) + " " +
             "subregion_start:" + str(subregion_start) + " " +
             "subregion_end:" + str(subregion_end) + " " +
             "subregion_avg_quality:" + str(avg(record.letter_annotations["phred_quality"][subregion_start:subregion_end + 1]))
