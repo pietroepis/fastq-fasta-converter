@@ -1,6 +1,8 @@
 # fastq-fasta-converter
+
+Bioinformatics Project - UniMiB
+
 FASTQ to FASTA file converter\
-"Elementi di Bioinformatica" Lab Project - UniMiB
 
 The script filters the reads of a `fastq` file provided as input (in relation to the conditions listed below) and converts them in a `fasta` file as output.
 The sample included in the repository was generated using _L1_ = 30, _L2_ = 60, _Q1_ = 30, _Q2_ = 55, _P_ = 0.15
